@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shreyanshu - Portfolio </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="s_logo-removebg-preview.png">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Shreyanshu's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#certifications">Certifications</a></li>
+                    <li><a href="git&github certificate.pdf" download class="cv-button">
+                        <i class="fas fa-file-download"></i> Download CV
+                    </a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="firstsection">
+            
+                <div class="leftsection">
+                    Hi, My name is <span class="purple">Shreyanshu</span>
+                    and I am a passionate<br>
+                    <span id="element"></span>
+                </div>
+        
+            
+            
+            <div class="rightsection">
+                <img src="web-developer.png"">
+            </div>
+            
+        </section><style>
+               
+            
+        </style>
+    </head>
+    <body>
+        <section class="about-section">
+            <h2 class="about-title">About Me</h2>
+            <p class="about-text">Hey there! I'm [Your Name], a creative and passionate developer dedicated to crafting seamless and engaging digital experiences. With a deep love for both front-end and back-end development, I thrive on exploring new technologies and pushing the boundaries of innovation.</p>
+            <p class="connect-text">Let's connect and create something amazing together!</p>
+            <div class="social-links">
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <a href="mailto:your.email@example.com"><i class="fas fa-envelope"></i></a>
+            </div>
+            <hr>
+        </section>
+        <!-- <section class=" secondsection">
+                <hr>
+                <h1>Projects</h1>
+                <section id="collection">
+                    <div class="collections container">
+                        <div class="content">
+                            <img src="https://i.postimg.cc/Xqmwr12c/clothing.webp" alt="img" />
+                            <div class="img-content">
+                                <p>Clothing Collections</p>
+                                <button><a href="#sellers">KNOW MORE</a></button>
+                            </div>
+                        </div>
+                        <div class="content2">
+                            <img src="https://i.postimg.cc/8CmBZH5N/shoes.webp" alt="img" />
+                            <div class="img-content2">
+                                <p>Shoes Spring</p>
+                                <button><a href="#sellers">KNOW MORE</a></button>
+                            </div>
+                        </div>
+                        <div class="content3">
+                            <img src="https://i.postimg.cc/MHv7KJYp/access.webp" alt="img" />
+                            <div class="img-content3">
+                                <p>TPC web</p>
+                                <button><a href="#sellers">KNOW MORE</a></button>
+                            </div>
+                        </div>
+                    </div>
+                </section> -->
+                <style>
+                    
+
+                </style>
+ <hr>
+                <section class="projects-section">
+                   
+                    <h2 class="section-title">Projects</h2>
+                    <div class="projects-container">
+                        <div class="project-card visible">
+                            <img src="project1.jpg" alt="Project 1" class="project-image">
+                            <div class="project-info">Project 1</div>
+                        </div>
+                        <div class="project-card visible">
+                            <img src="project2.jpg" alt="Project 2" class="project-image">
+                            <div class="project-info">Project 2</div>
+                        </div>
+                        <div class="project-card hidden">
+                            <img src="project3.jpg" alt="Project 3" class="project-image">
+                            <div class="project-info">Project 3</div>
+                        </div>
+                        <div class="project-card hidden">
+                            <img src="project4.jpg" alt="Project 4" class="project-image">
+                            <div class="project-info">Project 4</div>
+                        </div>
+                    </div>
+                    <button class="view-more-btn" onclick="toggleProjects()">View More</button>
+                    <button class="view-less-btn" onclick="toggleProjects()">View Less</button>
+                </section>
+                <script>
+                    function toggleProjects() {
+                        const allCards = document.querySelectorAll('.project-card');
+                        const viewMoreBtn = document.querySelector('.view-more-btn');
+                        const viewLessBtn = document.querySelector('.view-less-btn');
+                        const container = document.querySelector('.projects-container');
+
+                        if (allCards[2].classList.contains('hidden')) {
+                            allCards.forEach((card, index) => {
+                                setTimeout(() => {
+                                    card.classList.remove('hidden');
+                                    card.classList.add('visible');
+                                }, index * 300);
+                            });
+                            viewMoreBtn.style.display = 'none';
+                            viewLessBtn.style.display = 'block';
+                        } else {
+                            allCards.forEach((card, index) => {
+                                if (index >= 2) {
+                                    setTimeout(() => {
+                                        card.classList.add('hidden');
+                                        card.classList.remove('visible');
+                                    }, index * 300);
+                                }
+                            });
+                            setTimeout(() => {
+                                container.scrollIntoView({ behavior: 'smooth' });
+                            }, 800);
+                            setTimeout(() => {
+                                viewMoreBtn.style.display = 'block';
+                                viewLessBtn.style.display = 'none';
+                            }, 900);
+                        }
+                    }
+                </script>
+                <!-- <div class="container">
+
+                    <a href="https://drive.google.com/drive/u/1/folders/1vHaAcLBxZUjuqmty5yesbSEkhLB4LHkG"><img src="https://static.pexels.com/photos/52500/horse-herd-fog-nature-52500.jpeg"
+                            alt="Herd of horses"></a>
+                    <img src="https://static.pexels.com/photos/66898/elephant-cub-tsavo-kenya-66898.jpeg"
+                        alt="Baby Elephant">
+                    <img src="https://static.pexels.com/photos/213399/pexels-photo-213399.jpeg" alt="Koi Fish">
+                    <img src="https://static.pexels.com/photos/158471/ibis-bird-red-animals-158471.jpeg"
+                        alt="Ibis Bird">
+                    <img src="https://static.pexels.com/photos/133459/pexels-photo-133459.jpeg" alt="Lemur">
+                    <img src="https://static.pexels.com/photos/50988/ape-berber-monkeys-mammal-affchen-50988.jpeg"
+                        alt="Berber Monkeys">
+                </div> -->
+                <hr>
+
+
+                <!-- Certification Section -->
+
+                <section id="certifications">
+                    <h1 class="certifications">Certifications</h1>
+                    <div class="certifications container">
+                        <div class="cert-card">
+                            <img src="penitration testing cert.jpg" alt="Certification Image">
+                            <div class="cert-content">
+                                <p>Certification Name</p>
+                                <button><a
+                                        href="https://www.udemy.com/certificate/UC-12183fb0-9599-4d49-b67e-429ed124e2a2/"
+                                        target="_blank">View</a></button>
+                            </div>
+                        </div>
+                        <div class="cert-card">
+                            <img src="penitration testing cert.jpg" alt="Certification Image">
+                            <div class="cert-content">
+                                <p>Certification Name</p>
+                                <button><a
+                                        href="https://www.udemy.com/certificate/UC-12183fb0-9599-4d49-b67e-429ed124e2a2/"
+                                        target="_blank">View</a></button>
+                            </div>
+                        </div>
+                        <div class="cert-card">
+                            <img src="penitration testing cert.jpg" alt="Certification Image">
+                            <div class="cert-content">
+                                <p>Certification Name</p>
+                                <button><a
+                                        href="https://www.udemy.com/certificate/UC-12183fb0-9599-4d49-b67e-429ed124e2a2/"
+                                        target="_blank">View</a></button>
+                            </div>
+                        </div>
+                        <div class="cert-card">
+                            <img src="penitration testing cert.jpg" alt="Certification Image">
+                            <div class="cert-content">
+                                <p>Certification Name</p>
+                                <button><a
+                                        href="https://www.udemy.com/certificate/UC-12183fb0-9599-4d49-b67e-429ed124e2a2/"
+                                        target="_blank">View</a></button>
+                            </div>
+                        </div>
+                        <div class="cert-card">
+                            <img src="penitration testing cert.jpg" alt="Certification Image">
+                            <div class="cert-content">
+                                <p>Certification Name</p>
+                                <button><a
+                                        href="https://www.udemy.com/certificate/UC-12183fb0-9599-4d49-b67e-429ed124e2a2/"
+                                        target="_blank">View</a></button>
+                            </div>
+                        </div>
+                        <div class="cert-card">
+                            <img src="penitration testing cert.jpg" alt="Certification Image">
+                            <div class="cert-content">
+                                <p>Certification Name</p>
+                                <button><a
+                                        href="https://www.udemy.com/certificate/UC-12183fb0-9599-4d49-b67e-429ed124e2a2/"
+                                        target="_blank">View</a></button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Contact Section -->
+                <style>
+                  
+                
+                </style>
+            </head>
+            <body>
+                <section class="contact-section">
+                    <h2 class="contact-title">Contact Me</h2>
+                    <p class="contact-text">Feel free to connect and engage with me!</p>
+                    <div class="social-links">
+                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href=" https://wa.me/qr/G6YVFMBPV5X6C1" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="mailto:your.email@example.com"><i class="fas fa-envelope"></i></a>
+                    </div>
+                    <div class="contact-form">
+                        <h3>Get in Touch</h3>
+                        <form action="#" method="post">
+                            <input type="text" name="name" placeholder="Your Name" required>
+                            <input type="email" name="email" placeholder="Your Email" required>
+                            <textarea name="message" rows="3" placeholder="Your Message" required></textarea>
+                            <button type="submit">Send Message</button>
+                        </form>
+                    </div>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> Address: Your Address Here</p>
+                        <p><i class="fas fa-phone"></i> Phone: +91 XXXXXXXXXX</p>
+                        <p><i class="fas fa-envelope"></i> Email: your.email@example.com</p>
+                    </div>
+                </section>
+    </main>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+     document.addEventListener("DOMContentLoaded", function() {
+    var typed = new Typed("#element", {
+        strings: ["Web Developer"],
+        typeSpeed: 90,
+    });
+});
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const sections = document.querySelectorAll(".animate-section");
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                    }
+                });
+            }, { threshold: 0.5 });
+            
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+
+</html>
