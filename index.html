@@ -41,7 +41,7 @@
                     <li><a href="#about-section">About</a></li>
                     <li><a href="#projects-section">Projects</a></li>
                     <li><a href="#contact-section">Contact</a></li>
-                    <li><a href="#certification">Certifications</a></li>
+                    <li><a href="#certifications">Certifications</a></li>
                     <li><a href="image/git&github certificate.pdf" class="cv-button"><i class="fas fa-download"></i> Download CV</a></li>
                 </ul>
             </div>
@@ -49,20 +49,31 @@
     </header>
 
     <script>
+       
         const hamburger = document.querySelector(".hamburger");
-        const sidebar = document.querySelector(".sidebar");
-        const closeBtn = document.querySelector(".close-btn");
+const sidebar = document.querySelector(".sidebar");
+const closeBtn = document.querySelector(".close-btn");
+const sidebarLinks = document.querySelectorAll(".sidebar ul li a");
 
-        hamburger.addEventListener("click", () => {
-            sidebar.classList.add("active");
-        });
+hamburger.addEventListener("click", () => {
+    sidebar.classList.add("active");
+});
 
-        closeBtn.addEventListener("click", () => {
-            sidebar.classList.remove("active");
-        });
+closeBtn.addEventListener("click", () => {
+    sidebar.classList.remove("active");
+});
+
+// Close sidebar when a menu item is clicked
+sidebarLinks.forEach(link => {
+    link.addEventListener("click", () => {
+        sidebar.classList.remove("active");
+    });
+});
+
     </script>
 
     <main>
+        <section id="firstsection">
         <section class="firstsection">
             
                 <div class="leftsection">
@@ -77,6 +88,7 @@
                 <img src="web-developer.png"">
             </div>
             
+        </section>
         </section>
         <hr>
         <style>
