@@ -8,7 +8,9 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 nav {
-    position:fixed;
+   position: fixed;
+    width: 100%;
+    z-index: 1001;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -109,7 +111,7 @@ hr {
     box-shadow: -4px 0 6px rgba(0, 0, 0, 0.3);
     padding-top: 60px;
     transition: right 0.3s ease-in-out;
-    z-index: 1000; /* Ensure sidebar is above other elements */
+    z-index: 1111; /* Ensure sidebar is above other elements */
 }
 
 .sidebar.active {
@@ -226,19 +228,7 @@ hr {
     }
 }
 
-/* .container img {
-    width: 350px;
-    height: 200px;
-    margin: 20px; */
-    /* border: 10px solid #fefae0; */
-    /* filter: sepia(100%);
-    transition-duration: 1s;
-} */
-/* .container img:hover { */
-    /* border: 10px solid #fefae0; */
-    /* transform: scale(1.2);
-    filter: none;
-}*/
+
 .collections {
     display: flex;
     justify-content: center;
@@ -537,88 +527,7 @@ hr {
     margin-right: 10px;
     color: #007bff;
 }
-/* Certification Section */
-/* .certifications {
-display: flex;
-justify-content: center;
-flex-wrap: wrap;
-margin-top: 65px;
-max-width: 80vw;
-margin: auto;
-}
-#certifications{
-margin-left: 0%;
-}
-.cert-card {
-width: 350px;
-height: 220px;
-margin: 20px;
-position: relative;
-overflow: hidden;
-}
-.cert-card::after {
-content: "";
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-background: rgba(0, 0, 0, 0.871);
-z-index: 2;
-opacity: 0;
-transition: opacity 0.3s ease-in-out;
-}
-.cert-card:hover::after {
-opacity: 1;
-}
-.cert-card img {
-width: 100%;
-height: 100%;
-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-}
-.cert-content {
-position: absolute;
-top: 70%;
-left: 50%;
-transform: translate(-50%, -50%);
-transition: all 0.3s ease-in-out;
-color: var(--white);
-text-align: center;
-font-size: 2rem;
-font-weight: bolder;
-z-index: 5;
-opacity: 0;
-}
-.cert-content p {
-font-size: 1.6rem;
-}
-.cert-content button {
-border: none;
-background-color: var(--primary-color);
-color: var(--white);
-border-radius: 10px;
-padding: 10px;
-}
-.cert-content a {
-text-decoration: none;
-font-size: 1.2rem;
-color: #fff;
-transition: 0.3s;
-}
-.cert-card:hover .cert-content {
-opacity: 1;
-top: 50%;
-}
-.cert-content button:hover {
-background: var(--white);
-color: var(--primary-color);
-}
-.cert-content button:hover~.cert-content a {
-color: var(--primary-color);
-}
-.cert-content a:hover {
-color: var(--primary-color);
-} */
+
 /* Certification Section */
 /* Parent Section */
 #certifications {
