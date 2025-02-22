@@ -15,6 +15,29 @@ nav {
     background-color: rgb(6, 6, 44);
     padding: 0 20px;
 }
+hr {
+    border: none;
+    height: 4px; /* Adjust thickness */
+    background: linear-gradient(to right, #8e44ad, #3498db); /* Gradient effect */
+    border-radius: 2px;
+    width: 80%; /* Default width */
+    margin: 20px auto; /* Centered with spacing */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    hr {
+        height: 3px; /* Slightly thinner */
+        width: 90%; /* Full-width on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    hr {
+        height: 2px; /* Thinner for small screens */
+        width: 95%; /* Almost full width */
+    }
+}
 
 .logo {
     color: white;
