@@ -90,6 +90,27 @@ sidebarLinks.forEach(link => {
             
         </section>
         </section>
+          <button id="scrollToTop" title="Scroll to top">&#8679;</button>
+
+               <script>scrollBtn = document.getElementById("scrollToTop");
+
+               // Show the button when the page is scrolled down 300px
+               window.addEventListener("scroll", () => {
+                 if (window.pageYOffset > 300) {
+                   scrollBtn.style.display = "flex"; // Using flex to center the arrow
+                 } else {
+                   scrollBtn.style.display = "none";
+                 }
+               });
+               
+               // Smooth scroll to the top when the button is clicked
+               scrollBtn.addEventListener("click", () => {
+                 window.scrollTo({
+                   top: 0,
+                   behavior: "smooth"
+                 });
+               });
+               </script>
         <hr>
         <style>
                
