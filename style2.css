@@ -1108,3 +1108,25 @@ width: 100%;
 padding: 8px;
 }
 }
+#scrollToTop {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    z-index: 1001; /* Make sure it's above other elements */
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    outline: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 24px;
+    display: none; /* Hidden by default */
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #scrollToTop:hover {
+    background-color: #ff3300;
+  }
